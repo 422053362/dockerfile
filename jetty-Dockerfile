@@ -1,0 +1,12 @@
+FROM registry.cn-hangzhou.aliyuncs.com/loan-server/jetty:jetty-server
+MAINTAINER pengcheng091 "cheng.peng@minghe-inc.com"
+
+RUN mkdir /env/jetty9/work
+
+ENV JAVA_HOME=/env/jdk8
+ENV PATH=$PATH:$JAVA_HOME/bin
+ENV JETTY_HOME=/env/jetty9
+
+EXPOSE 8080
+
+CMD /env/jetty9/bin/jetty.sh run

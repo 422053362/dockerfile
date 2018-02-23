@@ -1,0 +1,5 @@
+FROM sonatype/nexus3
+
+RUN rm -rf /nexus_data
+
+CMD ["sh", "-c", "/opt/sonatype/start-nexus-repository-manager.sh"]
