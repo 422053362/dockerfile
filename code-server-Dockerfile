@@ -8,11 +8,11 @@ ENV CONFIG_FILE /opt/codepush-server/config/config.docker.js
 ENV DATA_DIR /opt/codepush-server/data
 ENV STORAGE_DIR /opt/codepush-server/storage
 
-RDS_USERNAME data_center
-RDS_PASSWORD ZdvvtTWQXMf22cv8
-DATA_BASE code-push
-RDS_HOST rm-bp1s7feggy021u476o.mysql.rds.aliyuncs.com
-RDS_PORT 3306
+ENV RDS_USERNAME data_center
+ENV RDS_PASSWORD ZdvvtTWQXMf22cv8
+ENV DATA_BASE code-push
+ENV RDS_HOST rm-bp1s7feggy021u476o.mysql.rds.aliyuncs.com
+ENV RDS_PORT 3306
 
 VOLUME [ "/tmp", "/opt/codepush-server/data", "/opt/codepush-server/storage" ]
 EXPOSE 8080
